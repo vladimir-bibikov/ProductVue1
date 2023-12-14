@@ -1,9 +1,9 @@
 <template>
     <div class="product-card">
-        <img src="JS2.jpg" alt="">
-        <h3>Title</h3>
-        <p>Description</p>
-        <p>2500</p>
+        <img :src="baseURL + product.attributes.img.data.attributes.url"  alt="">
+        <h3>{{ product.attributes.title }}</h3>
+        <p>{{  product.attributes.description }}</p>
+        <p>{{ product.attributes.price }}</p>
     </div>
 </template>
 
@@ -14,7 +14,7 @@ export default {
     },
     data () {
         return {
-            
+            baseURL: 'http://localhost:1337'
         }
     }
 }

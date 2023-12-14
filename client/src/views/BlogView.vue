@@ -2,8 +2,8 @@
     <div>
         <h1>Blog</h1>
     </div>
-    <div v-for="product in products" class="products" :key="product.id">
-        <ProductCard :product="product" />
+    <div class="products">
+        <ProductCard v-for="item in products" :product="item" :key="item.id"/>
     </div>
     
 </template>
@@ -26,7 +26,6 @@ export default {
         const data = await fetch('http://localhost:1337/api/products?populate=*')
         const js = await data.json()
         this.products = js.data
-        console.log(this.products)
     }
 }
 </script>
@@ -40,5 +39,6 @@ export default {
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
+    gap:20px;
 }
 </style>

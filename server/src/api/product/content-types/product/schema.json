@@ -35,6 +35,10 @@
       "relation": "manyToMany",
       "target": "api::category.category",
       "inversedBy": "products"
+    },
+    "sale": {
+      "type": "integer",
+      "default": 0
     }
   }
 }

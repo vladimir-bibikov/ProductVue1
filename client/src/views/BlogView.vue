@@ -3,8 +3,15 @@
         <h1>Blog</h1>
     </div>
     <div class="products">
-        <ProductCard v-for="item in products" :product="item" :key="item.id"/>
+        <ProductCard
+            @myFunc = "changePrice" 
+            v-for="item in products" 
+            :product="item" 
+            :key="item.id
+        "></ProductCard>
     </div>
+
+    <input v-model="price" type="text" placeholder="цена"/>
     
 </template>
 
@@ -17,10 +24,13 @@ export default {
     data () {
         return {
             products: [],
+            price: null,
         }
     },
     methods: {
-
+        changePrice(priceChild){
+           this.price = priceChild
+        }
     },
     async beforeMount(){
         const data = await fetch('http://localhost:1337/api/products?populate=*')

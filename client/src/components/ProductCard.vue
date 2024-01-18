@@ -6,7 +6,7 @@
         <p>{{  product.attributes.description }}</p>
         <p :class="{ price: priceRedact }">{{ product.attributes.price }}</p>
         <h4 v-if="product.attributes.sale">{{ product.attributes.sale }}</h4>
-        <button @click="$emit('myFunc',this.product.attributes.price)">Редакт.</button>
+        <button @click="$emit('myFunc', this.product.attributes.price)">Редакт.</button>
         <slot></slot>
     </div>
 </template>
@@ -66,7 +66,7 @@ export default {
     }
 
     & img{
-        width: 100%;
+        width: 100px;
     }
 }
 </style>

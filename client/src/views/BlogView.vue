@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Blog</h1>
+        <h1 class="ml130">Blog</h1>
     </div>
     <div class="products">
         <ProductCard
@@ -11,7 +11,7 @@
         "></ProductCard>
     </div>
 
-    <input v-model="price" type="text" placeholder="цена"/>
+    <input class="ml130" v-model="price" type="text" placeholder="цена"/>
     
 </template>
 
@@ -51,4 +51,8 @@ export default {
     padding: 20px;
     gap:20px;
 }
-</style>
+
+.ml130 {
+    margin-left: 130px;
+}
+</style>100px;

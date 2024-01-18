@@ -1,15 +1,18 @@
 <template>
-    <div>
-        <h1 v-show="title">Главная</h1>
-    </div>
-    <input type="button" value="Click" @click="titleFunc($event), myFunc($event)">
-    <div>
-        <h2>Hello</h2>
-    </div>
-    <input type="text" v-model="inputValue" :placeholder="txtInput"><br><br>
-    <p>{{ inputValue }}</p>
+    <div class="pl130">
+        <div>
+            <h1 v-show="title">Главная</h1>
+        </div>
+        <input type="button" value="Click" @click="titleFunc($event), myFunc($event)">
+        <div>
+            <h2>Hello</h2>
+        </div>
+        <input type="text" v-model="inputValue" :placeholder="txtInput"><br><br>
+        <p>{{ inputValue }}</p>
 
-    <p @click="changClass" :class="classP">Двойные фигурные скобки: <span v-html='rawHtml'></span></p>
+        <p @click="changClass" :class="classP">Двойные фигурные скобки: <span v-html='rawHtml'></span></p>
+    </div>
+    
 </template>
 
 <script>
@@ -43,6 +46,10 @@ export default {
 </script>
 
 <style  scoped>
+    .pl130 {
+        padding-left: 130px;
+        padding-top: 20px;
+    }
     .red{
         color: red;
     }
